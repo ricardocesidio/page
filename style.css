@@ -127,6 +127,7 @@ header {
 
     body {
         margin: 10px;
+        background-attachment: scroll;
     }
 
     h1 {
@@ -142,7 +143,7 @@ header {
     }
 
     header {
-        padding: 20px;
+        padding: 10px 5px;
         margin: 10px;
     }
 
@@ -152,6 +153,7 @@ header {
         gap: 20px;
         flex-wrap: wrap;
         margin-top: 20px;
+
     }
 
     .menu img {
@@ -172,3 +174,13 @@ header {
         padding: 15px;
     }
 }
+
+.bg {
+    position: fixed;
+    inset: 0;
+    background-image: url(wallp.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
