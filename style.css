@@ -1,10 +1,18 @@
+
+* {
+    box-sizing: border-box;
+}
+
+
 body {
     margin: 20px;
     min-height: 100vh;
     background-image: url(wallp.jpg);
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
 }
+
 
 h1 {
     color: aliceblue;
@@ -17,8 +25,8 @@ h1 {
 h2 {
     margin: 10px;
     text-align: center;
-    font-size: 4em;
     font-family: "Google Sans Flex", sans-serif;
+    font-size: 4em;
 }
 
 p {
@@ -28,6 +36,7 @@ p {
     font-size: 40px;
 }
 
+
 header {
     padding: 40px;
     background-color: black;
@@ -36,64 +45,63 @@ header {
     border-radius: 5px;
     position: relative;
     margin: 20px;
-    background-size: cover;
 }
 
+
 .menu {
-    display: flex;         
+    display: flex;
     justify-content: center;
-    gap: 150px;                  
-    padding: 0;
-    margin: 0;
-    flex-wrap: nowrap;
-    
+    align-items: center;
+    gap: 150px;
+
     position: absolute;
     top: 50%;
-    left: 50%; 
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .menu img {
-    background-color: rgba(240, 248, 255, 0.615);
     width: 49px;
     height: 49px;
-    border-radius: 50%; 
     padding: 6px;
-    
+    border-radius: 50%;
+    background-color: rgba(240, 248, 255, 0.615);
+    transition: 0.2s;
 }
 
 .menu img:hover {
-    background-color: rgb(255, 255, 255); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 
 .home-button {
-    width: 75px;
-    height: 75px;
+    width: 65px;
+    height: 65px;
     background-color: rgba(255, 255, 255, 0.669);
     border-radius: 40px;
     padding: 1px;
+
     position: absolute;
+    top: 50%;
     left: 50%;
-    top: 50%; 
     transform: translate(-50%, -50%);
-    
 }
 
 .home-button:hover {
-    background-color: rgb(255, 255, 255); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 
 .container {
     background-color: rgba(0, 0, 0, 0.82);
     padding: 20px;
-    border-radius: 10px; 
+    border-radius: 10px;
     margin: auto;
     color: aliceblue;
 }
+
 
 .divlogo {
     display: flex;
@@ -106,15 +114,16 @@ header {
     background-color: rgba(240, 248, 255, 0.522);
     padding: 5px;
     margin: 3px;
+    transition: 0.2s;
 }
 
 .divlogo img:hover {
-    background-color: rgb(255, 255, 255); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.list img {
 
+.list img {
     width: 50px;
     height: 50px;
     border-radius: 80px;
@@ -123,57 +132,6 @@ header {
     margin: 2.5px;
 }
 
-@media (max-width: 768px) {
-
-    body {
-        margin: 10px;
-        background-attachment: scroll;
-    }
-
-    h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 2em;
-    }
-
-    p {
-        font-size: 20px;
-    }
-
-        header {
-        padding: 2px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-    }
-
-    .menu {
-        position: static;
-        transform: none;
-        gap: 15px;
-        flex-wrap: wrap;
-    }
-
-
-    .menu img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .home-button {
-        position: static;
-        transform: none;
-        margin: 5px 0;
-    }
-
-
-    .container {
-        padding: 15px;
-    }
-}
 
 .bg {
     position: fixed;
@@ -184,3 +142,51 @@ header {
     z-index: -1;
 }
 
+
+@media (max-width: 768px) {
+
+    body {
+        margin: 10px;
+        background-attachment: scroll;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    header {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .menu {
+        position: static;
+        transform: none;
+
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .menu img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .home-button {
+        position: static;
+        transform: none;
+        margin: 15px auto;
+        display: block;
+    }
+}
