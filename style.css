@@ -102,9 +102,9 @@ header {
 }
 
 .divlogo img {
-    border-radius: 80px;
+    border-radius: 120px;
     background-color: rgba(240, 248, 255, 0.522);
-    padding: 3px;
+    padding: 5px;
     margin: 3px;
 }
 
