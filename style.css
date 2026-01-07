@@ -1,135 +1,17 @@
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 
 body {
-    margin: 20px;
     min-height: 100vh;
     background-image: url(wallp.jpg);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-}
-
-
-h1 {
-    color: aliceblue;
-    text-align: center;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 40px;
-    margin: 20px;
-}
-
-h2 {
-    margin: 10px;
-    text-align: center;
-    font-family: "Google Sans Flex", sans-serif;
-    font-size: 4em;
-}
-
-p {
-    margin: 10px;
-    text-align: center;
-    font-family: "Smooch Sans", sans-serif;
-    font-size: 40px;
-}
-
-
-header {
-    padding: 40px;
-    background-color: black;
-    color: white;
-    border: 3px solid rgba(255, 255, 255, 0.486);
-    border-radius: 5px;
-    position: relative;
-    margin: 20px;
-}
-
-
-.menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 150px;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.menu img {
-    width: 49px;
-    height: 49px;
-    padding: 6px;
-    border-radius: 50%;
-    background-color: rgba(240, 248, 255, 0.615);
-    transition: 0.2s;
-}
-
-.menu img:hover {
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-
-.home-button {
-    width: 65px;
-    height: 65px;
-    background-color: rgba(255, 255, 255, 0.669);
-    border-radius: 40px;
-    padding: 1px;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.home-button:hover {
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-
-.container {
-    background-color: rgba(0, 0, 0, 0.82);
-    padding: 20px;
-    border-radius: 10px;
-    margin: auto;
-    color: aliceblue;
-}
-
-
-.divlogo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.divlogo img {
-    border-radius: 120px;
-    background-color: rgba(240, 248, 255, 0.522);
-    padding: 5px;
-    margin: 3px;
-    transition: 0.2s;
-}
-
-.divlogo img:hover {
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-
-.list img {
-    width: 50px;
-    height: 50px;
-    border-radius: 80px;
-    background-color: rgba(250, 255, 255, 0.671);
-    padding: 2.5px;
-    margin: 2.5px;
+    font-family: Arial, sans-serif;
 }
 
 
@@ -142,40 +24,107 @@ header {
     z-index: -1;
 }
 
+.header {
+    background: black;
+    border: 3px solid rgba(255,255,255,0.4);
+    border-radius: 8px;
+    margin: 20px;
+    padding: 10px;
+    
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+.menu.left {
+    justify-content: flex-start;
+}
+
+.menu.right {
+    justify-content: flex-end;
+}
+
+.menu img {
+    width: 42px;
+    height: 42px;
+    padding: 6px;
+    border-radius: 100%;
+    background: rgba(240,248,255,0.7);
+}
+
+
+.home-button {
+    width: 50px;
+    height: 50px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 50%;
+    padding: 6px;
+}
+
+
+h1 {
+    color: aliceblue;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 32px;
+    margin: 16px 0;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-family: "Google Sans Flex", sans-serif;
+    font-size: 28px;
+    margin-top: 16px;
+}
+
+p {
+    color: aliceblue;
+    text-align: center;
+    font-family: "Smooch Sans", sans-serif;
+    font-size: 18px;
+    margin-top: 12px;
+}
+
+
+.container {
+    background: rgba(0,0,0,0.8);
+    border-radius: 16px;
+    padding: 20px;
+    margin: 12px;
+}
+
+
+.divlogo {
+    display: flex;
+    justify-content: center;
+}
+
+.divlogo img {
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    border-radius: 24px;
+    margin-top: 8px;
+}
 
 @media (max-width: 768px) {
 
-    body {
-        margin: 10px;
-        background-attachment: scroll;
+    .header {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        justify-items: center;
     }
 
-    h1 {
-        font-size: 26px;
-    }
-
-    h2 {
-        font-size: 2em;
-    }
-
-    p {
-        font-size: 18px;
-    }
-
-    header {
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .menu {
-        position: static;
-        transform: none;
-
-        gap: 25px;
-        flex-wrap: wrap;
+    .menu.left,
+    .menu.right {
+        justify-content: center;
     }
 
     .menu img {
@@ -184,9 +133,7 @@ header {
     }
 
     .home-button {
-        position: static;
-        transform: none;
-        margin: 15px auto;
-        display: block;
+        width: 48px;
+        height: 48px;
     }
 }
